@@ -1,4 +1,4 @@
-# FACEBOOK COMMENTS HOMEPAGE - WITH TERMUX
+# FACEBOOK KOMENTAR - WITH TERMUX
 <div align="center">
   <img src="Data/Comments.png">
   <br>
