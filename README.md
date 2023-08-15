@@ -40,12 +40,13 @@ $ python Run.py
 - There may be a problem when creating the image resulting in an error.
 - The script is looking for an appropriate image to comment on.
 - Use comments from the website **"https://textpro.me"** so that there are not too many errors.
+- Your Facebook may be blocked 24 hours or 7 days.
 
 ### Why login failed?
 
-- Your facebook account is logged out or checkpoint.
 - Your facebook account is in free mode.
-- Your facebook account is locked or checkpoint new version.
+- Your Facebook is temporarily locked.
+- Your facebook account is logged out or checkpoint.
 
 ### Facebook temporarily locked?
 
