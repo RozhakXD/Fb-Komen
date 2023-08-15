@@ -17,7 +17,7 @@
 ##
 
 ### What is Comments?
-[**Comments**](https://github.com/RozhakXD/Comments) Is a script to comment on and like all posts on the home page using an image containing the name of the target account.
+[**Comments**](https://github.com/RozhakXD/Comments) is a script to comment on and like all posts on the home page using an image containing the name of the target account.
 
 ### Termux command?
 First you must have the [Termux](https://f-droid.org/repo/com.termux_118.apk) application to run this script and for how to use it can be seen on [**Youtube**](https://youtu.be/cltn7d6kX2g). Then you enter some basic commands below!
