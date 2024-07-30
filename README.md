@@ -1,4 +1,4 @@
-# FB-KOMEN - FACEBOOK TIMELINE AUTO COMMENTS
+# FACEBOOK TIMELINE AUTO COMMENTS
 
 ![Fb-Komen](https://github.com/user-attachments/assets/aa09c896-3dff-4d54-bca7-37264c9eb75c)
 
@@ -51,8 +51,8 @@ If you enjoy using this project, consider supporting its development:
 ![Komentar](https://github.com/user-attachments/assets/f1684a61-2436-4984-8aab-67fb4dd4afee)
 
 ## Troubleshooting
-- **Comment Failure**: If the script fails to comment, the post might not be commentable, the post ID might be unavailable, or your Facebook account could be blocked.
 - **Connection Problems**: Ensure you have a stable internet connection. If you encounter connection issues, the script will notify you and attempt to reconnect.
+- **Comment Failure**: If the script fails to comment, the post might not be commentable, the post ID might be unavailable, or your Facebook account could be blocked.
 - **Invalid Cookies**: If you receive an error related to cookies, ensure your cookies are correctly saved in `Penyimpanan/Cookie.json`. Re-run the login process if necessary.
 - **Script Stuck**: If the script gets stuck, you can stop it using `CTRL + C` and restart it.
 - **Login Issues**: If you fail to log in, ensure that your Facebook account language is set to Indonesian and that you are not using the free mode on your account.
