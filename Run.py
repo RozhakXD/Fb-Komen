@@ -75,7 +75,7 @@ def PROMPT():
 
 def TAMPILKAN_BANNER():
     os.system('cls' if os.name == 'nt' else 'clear')
-    printf(Panel(f"""[bold red]  _____ _           _  __                          
+    printf(Panel(r"""[bold red]  _____ _           _  __                          
  |  ___| |__       | |/ /___  _ __ ___   ___ _ __  
  | |_  | '_ \ _____| ' // _ \| '_ ` _ \ / _ \ '_ \ 
  |  _| | |_) |_____| . \ (_) | | | | | |  __/ | | |
@@ -109,7 +109,7 @@ class LOGIN:
     def COOKIES(self):
         try:
             TAMPILKAN_BANNER()
-            printf(Panel(f"[bold white]Silahkan masukan cookies akun Facebook kamu, gunakan bahasa Indonesia di akun\nagar tidak terjadi kesalahan saat login!", width=57, style="bold light_slate_grey", title=">> [Login Cookies] <<", subtitle="╭─────", subtitle_align="left"))
+            printf(Panel(f"[bold white]Silahkan masukan cookies akun Facebook kamu, gunakan bahasa Indonesia di akun\nagar tidak terjadi kesalahan saat login!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Login Cookies] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
             self.YOUR_COOKIES = Console().input("[bold light_slate_grey]   ╰─> ")
             self.NAME, self.USER = self.VALIDASI_COOKIES(cookies=self.YOUR_COOKIES)
             with open('Penyimpanan/Cookie.json', 'w+') as W:
@@ -118,11 +118,11 @@ class LOGIN:
                 }))
             W.close()
             printf(Panel(f"""[bold white]Name :[bold green] {self.NAME.title()}
-[bold white]User :[bold red] https://m.facebook.com/profile.php?id={self.USER}""", width=57, style="bold light_slate_grey", title=">> [Selamat Datang] <<"))
+[bold white]User :[bold red] https://m.facebook.com/profile.php?id={self.USER}""", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Selamat Datang] <<"))
             time.sleep(4.5)
             FITUR()
         except (Exception) as e:
-            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
             exit()
 
     def VALIDASI_COOKIES(self, cookies):
@@ -139,7 +139,7 @@ class LOGIN:
                     self.NAME, self.USER = ('null', 'null')
                 return (self.NAME, self.USER)
             else:
-                printf(Panel(f"[bold red]Ada masalah dengan cookies anda pastikan akun tidak terkena checkpoint dan\ntidak dalam keadaan mode gratis!", width=57, style="bold light_slate_grey", title=">> [Login Gagal] <<"))
+                printf(Panel(f"[bold red]Ada masalah dengan cookies anda pastikan akun tidak terkena checkpoint dan\ntidak dalam keadaan mode gratis!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Login Gagal] <<"))
                 time.sleep(5.7)
                 self.COOKIES()
 
@@ -156,7 +156,7 @@ class FITUR:
                 Panel(f"[bold white]User: [bold red]{self.USER[:17]}", width=28, style="bold light_slate_grey")
             ]))
         except (Exception) as e:
-            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
             time.sleep(5.7)
             LOGIN().COOKIES()
 
@@ -165,13 +165,13 @@ class FITUR:
 [bold green]3[bold white]. Komentar Dan Reaction Target
 [bold green]4[bold white]. Ganti Teks Komentar
 [bold green]5[bold white]. Sukai Postingan Beranda ([bold green]Like Only[bold white])
-[bold green]6[bold white]. Keluar ([bold yellow]Exit[bold white])""", width=57, style="bold light_slate_grey", title=">> [Feature] <<", subtitle="╭─────", subtitle_align="left"))
+[bold green]6[bold white]. Keluar ([bold yellow]Exit[bold white])""", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Feature] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
         self.PILIHAN = Console().input("[bold light_slate_grey]   ╰─> ")
         if self.PILIHAN in ['1', '01']:
             try:
-                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan komentar, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title=">> [Delay] <<", subtitle="╭─────", subtitle_align="left"))
+                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan komentar, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Delay] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
                 self.DETIK = int(Console().input("[bold light_slate_grey]   ╰─> "))
-                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title=">> [Catatan] <<"))
+                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Catatan] <<"))
                 if os.path.exists('Trash/Sudah.txt') == False:
                     open('Trash/Sudah.txt', 'w+').write('')
                 FOTO.update({
@@ -206,13 +206,13 @@ class FITUR:
                         time.sleep(9.7)
                         continue
             except (Exception) as e:
-                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
                 exit()
         elif self.PILIHAN in ['2', '02']:
             try:
-                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan komentar, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title=">> [Delay] <<", subtitle="╭─────", subtitle_align="left"))
+                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan komentar, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Delay] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
                 self.DETIK = int(Console().input("[bold light_slate_grey]   ╰─> "))
-                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title=">> [Catatan] <<"))
+                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Catatan] <<"))
                 if os.path.exists('Trash/Sudah.txt') == False:
                     open('Trash/Sudah.txt', 'w+').write('')
                 FOTO.update({
@@ -247,13 +247,13 @@ class FITUR:
                         time.sleep(9.7)
                         continue
             except (Exception) as e:
-                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
                 exit()
         elif self.PILIHAN in ['3', '03']:
             try:
-                printf(Panel(f"[bold white]Silahkan masukan link postingan, pastikan postingan bisa dikomentari dan link benar. Misalnya :[bold  green] https://m.facebook.com/rozhak.official/posts/pfbid02Jvk96rMX37dMFRvsFyBXvazuCfMhiPKpK1AaHovjez3ZrR1vRhKXddu6HJidKupHl?_rdc=1&_rdr", width=57, style="bold light_slate_grey", title=">> [Link Postingan] <<", subtitle="╭─────", subtitle_align="left"))
+                printf(Panel(f"[bold white]Silahkan masukan link postingan, pastikan postingan bisa dikomentari dan link benar. Misalnya :[bold  green] https://m.facebook.com/rozhak.official/posts/pfbid02Jvk96rMX37dMFRvsFyBXvazuCfMhiPKpK1AaHovjez3ZrR1vRhKXddu6HJidKupHl?_rdc=1&_rdr", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Link Postingan] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
                 self.LINK_POSTINGAN = Console().input("[bold light_slate_grey]   ╰─> ")
-                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title=">> [Catatan] <<"))
+                printf(Panel(f"[bold white]Sedang menjalankan komentar dan reaction, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Catatan] <<"))
                 FOTO.update({
                     "TYPE": "2"
                 })
@@ -261,11 +261,11 @@ class FITUR:
                 FACEBOOK().KOMENTAR(self.COOKIES, self.LINK_POSTINGAN)
                 exit()
             except (Exception) as e:
-                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
                 exit()
         elif self.PILIHAN in ['4', '04']:
             try:
-                printf(Panel(f"[bold white]Silahkan masukan teks komentar, gunakan[bold  red] $[bold  white] untuk melakukan tag dan gunakan[bold  red] +[bold  white] jika ingin\nmemasukan banyak teks. Misalnya :[bold  green] Hallo $+Mantap $", width=57, style="bold light_slate_grey", title=">> [Teks Komentar] <<", subtitle="╭─────", subtitle_align="left"))
+                printf(Panel(f"[bold white]Silahkan masukan teks komentar, gunakan[bold  red] $[bold  white] untuk melakukan tag dan gunakan[bold  red] +[bold  white] jika ingin\nmemasukan banyak teks. Misalnya :[bold  green] Hallo $+Mantap $", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Teks Komentar] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
                 self.TEKS_KOMENTAR = Console().input("[bold light_slate_grey]   ╰─> ")
                 if len(self.TEKS_KOMENTAR.split('+')) != 0:
                     if os.path.exists('Teks/Teks.txt') != False:
@@ -273,19 +273,19 @@ class FITUR:
                     for TEKS in self.TEKS_KOMENTAR.split('+'):
                         self.FINAL_TEKS = TEKS.replace('$', '{}')
                         open('Teks/Teks.txt', 'a+').write(f'{self.FINAL_TEKS}\n')
-                    printf(Panel(f"[bold white]Kami sudah berhasil mengubah teks komentar menjadi yang anda inginkan, anda bisa\nmelihatnya di file[bold  green] Teks/Teks.txt!", width=57, style="bold light_slate_grey", title=">> [Sukses] <<"))
+                    printf(Panel(f"[bold white]Kami sudah berhasil mengubah teks komentar menjadi yang anda inginkan, anda bisa\nmelihatnya di file[bold  green] Teks/Teks.txt!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Sukses] <<"))
                     exit()
                 else:
-                    printf(Panel(f"[bold red]Anda harus memasukan setidaknya satu kalimat untuk menganti teks komentar default!", width=57, style="bold light_slate_grey", title=">> [Tidak Boleh Kosong] <<"))
+                    printf(Panel(f"[bold red]Anda harus memasukan setidaknya satu kalimat untuk menganti teks komentar default!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Tidak Boleh Kosong] <<"))
                     exit()
             except (Exception) as e:
-                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
                 exit()
         elif self.PILIHAN in ['5', '05']:
             try:
-                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan reaction, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title=">> [Delay] <<", subtitle="╭─────", subtitle_align="left"))
+                printf(Panel(f"[bold white]Silahkan masukan jeda untuk menjalankan reaction, gunakan delay lebih\ndari 60 detik agar tidak terdeteksi spam!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Delay] <<", subtitle="[bold light_slate_grey]╭─────", subtitle_align="left"))
                 self.DETIK = int(Console().input("[bold light_slate_grey]   ╰─> "))
-                printf(Panel(f"[bold white]Sedang menjalankan reaction halaman beranda, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title=">> [Catatan] <<"))
+                printf(Panel(f"[bold white]Sedang menjalankan reaction halaman beranda, Kamu bisa menggunakan[bold  red] CTRL + Z[bold  white] jika\ningin berhenti dan[bold  yellow] CTRL + C[bold  white] jika stuck!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Catatan] <<"))
                 if os.path.exists('Trash/Sudah.txt') == False:
                     open('Trash/Sudah.txt', 'w+').write('')
                 KOMENTAR.update({
@@ -320,18 +320,18 @@ class FITUR:
                         time.sleep(9.7)
                         continue
             except (Exception) as e:
-                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+                printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
                 exit()
         elif self.PILIHAN in ['6', '06']:
             try:
                 os.remove('Penyimpanan/Cookie.json')
-                printf(Panel(f"[bold white]Kami sudah berhasil menghapus data akun anda, terima kasih telah menggunakan program ini!", width=57, style="bold light_slate_grey", title=">> [Keluar] <<"))
+                printf(Panel(f"[bold white]Kami sudah berhasil menghapus data akun anda, terima kasih telah menggunakan program ini!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Keluar] <<"))
                 time.sleep(2.7)
                 exit()
             except:
                 exit()
         else:
-            printf(Panel(f"[bold red]Pilihan yang kamu masukan tidak ada dalam fitur dari program ini, silahkan\nmasukan pilihan dengan benar!", width=57, style="bold light_slate_grey", title=">> [Pilihan Salah] <<"))
+            printf(Panel(f"[bold red]Pilihan yang kamu masukan tidak ada dalam fitur dari program ini, silahkan\nmasukan pilihan dengan benar!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Pilihan Salah] <<"))
             time.sleep(4.7)
             FITUR()
 
@@ -497,7 +497,7 @@ class FACEBOOK:
                     printf(Panel(f"""[bold white]Status :[italic green] Commented successfully...[/]
 [bold white]Link :[bold red] {str(link_postingan)[:134]}
 [bold white]Komentar :[bold yellow] {self.COMMENT_TEXT}
-[bold white]Reaksi :[bold green] {str(self.TIPE_REAKSI).upper()}""", width=57, style="bold light_slate_grey", title=">> [Sukses] <<"))
+[bold white]Reaksi :[bold green] {str(self.TIPE_REAKSI).upper()}""", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Sukses] <<"))
                     open('Trash/Sudah.txt', 'a+').write(f'{link_postingan}\n')
                     SUKSES.append(f'{link_postingan}')
                     return ("0_0")
@@ -531,7 +531,7 @@ class FACEBOOK:
             if bool(KOMENTAR['STATUS']) == False:
                 printf(Panel(f"""[bold white]Status :[italic green] Successfully liked...[/]
 [bold white]Link :[bold red] {str(link_postingan)[:134]}
-[bold white]Reaksi :[bold green] {str(TIPE().REACTION(TYPE_)).upper()}""", width=57, style="bold light_slate_grey", title=">> [Sukses] <<"))
+[bold white]Reaksi :[bold green] {str(TIPE().REACTION(TYPE_)).upper()}""", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Sukses] <<"))
                 SUKSES.append(f'{link_postingan}')
                 return ("0_0")
             else:
@@ -642,9 +642,9 @@ class GENERATE:
                     "Content-Type": "multipart/form-data; boundary={}".format(BOUNDARY)
                 })
 
-                self.BUILD_SERVER = re.search('name="build_server" value="(.*?)"', str(response.text)).group(1)
-                self.TOKEN = re.search('name="token" value="(.*?)"', str(response.text)).group(1)
-                self.BUILD_SERVER_ID = re.search('name="build_server_id" value="(.*?)"', str(response.text)).group(1)
+                self.BUILD_SERVER = re.search(r'name="build_server" value="(.*?)"', str(response.text)).group(1)
+                self.TOKEN = re.search(r'name="token" value="(.*?)"', str(response.text)).group(1)
+                self.BUILD_SERVER_ID = re.search(r'name="build_server_id" value="(.*?)"', str(response.text)).group(1)
 
                 data = MultipartEncoder({
                     "build_server_id": (None, self.BUILD_SERVER_ID),
@@ -656,11 +656,11 @@ class GENERATE:
 
                 response2 = SESSION.post('{}'.format(self.URL), data = data)
 
-                self.BUILD_SERVER_ID = re.search('build_server_id&quot;:&quot;(.*?)&', str(response2.text)).group(1)
-                self.ID = re.search('id&quot;:&quot;(\d+)&', str(response2.text)).group(1)
-                self.TEXT = re.search('\[&quot;(.*?)&quot;\]', str(response2.text)).group(1)
-                self.TOKEN = str(re.search('token&quot;:&quot;(.*?)&', str(response2.text)).group(1)).replace('\\','')
-                self.BUILD_SERVER = str(re.search('build_server&quot;:&quot;(.*?)&', str(response2.text)).group(1)).replace('\\','')
+                self.BUILD_SERVER_ID = re.search(r'build_server_id&quot;:&quot;(.*?)&', str(response2.text)).group(1)
+                self.ID = re.search(r'id&quot;:&quot;(\d+)&', str(response2.text)).group(1)
+                self.TEXT = re.search(r'\[&quot;(.*?)&quot;\]', str(response2.text)).group(1)
+                self.TOKEN = str(re.search(r'token&quot;:&quot;(.*?)&', str(response2.text)).group(1)).replace('\\','')
+                self.BUILD_SERVER = str(re.search(r'build_server&quot;:&quot;(.*?)&', str(response2.text)).group(1)).replace('\\','')
 
                 SESSION.headers.update({
                     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
@@ -728,7 +728,7 @@ if __name__ == '__main__':
         os.system('git pull')
         FITUR()
     except (Exception) as e:
-        printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title=">> [Error] <<"))
+        printf(Panel(f"[bold red]{str(e).capitalize()}!", width=57, style="bold light_slate_grey", title="[bold light_slate_grey]>> [Error] <<"))
         exit()
     except (KeyboardInterrupt):
         exit()
